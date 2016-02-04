@@ -1,14 +1,19 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php get_header(); ?>
 
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
+<section class="promo section offset-header has-pattern" id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <h1>Don't get lost at sea</h1>
+  				<h2>Are the right people finding your website?</h2>
+            </div><!--//overview-->
+                                                      
+        </div><!--//row-->
+    </div><!--//container-->
+</section>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-<?php endwhile; ?>
 
-<?php the_posts_navigation(); ?>
+<h1>Hello, world!</h1>
+ 
+
+<?php get_footer(); ?>

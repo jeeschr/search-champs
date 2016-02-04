@@ -17,3 +17,16 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+body{
+	// background-color: grey;
+}
+
+
+
+section#header{
+	background-image:url('../images/ocean-wave.png');
+	height: 700px;
+	background-size:cover;
+	padding-top:200px;
+}
