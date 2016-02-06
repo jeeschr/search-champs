@@ -18,15 +18,141 @@
 @import "layouts/posts";
 @import "layouts/tinymce";
 
-body{
-	// background-color: grey;
-}
-
 
 
 section#header{
 	background-image:url('../images/ocean-wave.png');
-	height: 700px;
+	margin-top: -50px;
+	background-position: center center;
 	background-size:cover;
-	padding-top:200px;
+	background-repeat:no-repeat;
+	padding:250px 0 250px 0;
+	position: relative;
+	color: white;
+	a{
+		background-color:$brand-accent;
+		color:white;
+		border-radius: 0;
+		margin-top: 60px;
+		padding: 20px 40px;
+		// font-weight: bold;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		&:hover{
+			background-color:lighten( $brand-accent, 10% )
+		}
+	}
+
+	h1{
+		font-size: 4em;
+		font-weight: 800;
+	}
+	h2{
+		font-size: 2.5em;
+		font-weight: 800;
+	}
+	&:before{
+		content:'';
+		width:100%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(50,50,50,0.3);
+		top:0;
+		left:0;
+	}
+	@media(max-width:768px){
+		padding:150px 0 150px 0;
+	}
 }
+
+section#info{
+	margin-top:40px;
+	margin-bottom:40px;
+	.box{
+		// border:solid 1px;
+		height: 300px;
+		padding: 10px;
+		font-size: 1.3em;
+		margin-bottom:20px;
+	}
+	.box .img-wrap{
+		// background-color:blue;
+		border: solid 3px $brand-accent;
+		// display: block;
+		border-radius: 50%;
+		margin-left: auto;
+		// position: absolute;
+		margin-right: auto;
+		// left:0;
+		// right: 0;
+		width:160px;
+		height: 160px;
+	}
+
+	.box img{
+		padding: 20px;
+		max-width: 150px;
+		max-height: 150px;
+	}
+	.box .off-center img{
+		padding-top: 30px;
+		padding-left:25px;
+	}
+	.box h3,p{
+		text-align: center;
+	}
+	.box h3{
+		color:$brand-accent;
+	}
+}
+section#contact{
+	background-image:url('../images/laptop.jpg');
+	background-size:cover;
+	background-position:center center;
+	padding: 100px 0 100px 0;
+	position:relative;
+	color: white;
+	#info-wrap{
+		text-align: center;
+		font-size: 1.4em;
+	}
+	#info-wrap h2{
+		margin-bottom:20px;
+	}
+	#info-wrap p{
+		margin-top: 20px;
+	}
+	form{
+		text-align: center;
+		position:relative;
+		margin-left:auto;
+		margin-right: auto;
+		left:0;
+		right: 0;
+		display: inline-block;
+	}
+	form p{
+		text-align: left;
+	}
+	form input[type='submit']{
+		text-align: center;
+		color:white;
+		border:0;
+		width:100%;
+		height:40px;
+		background-color:$brand-accent;
+	}
+	&:before{
+		content:'';
+		width:100%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(50,50,50,0.6);
+		top:0;
+		left:0;
+	}
+}
+
+
+
+

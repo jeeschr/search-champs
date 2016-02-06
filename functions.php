@@ -14,7 +14,7 @@ $sage_includes = [
   'lib/extras.php',    // Custom functions
   'lib/setup.php',     // Theme setup
   'lib/titles.php',    // Page titles
-  // 'lib/wrapper.php',   // Theme wrapper class
+  'lib/wrapper.php',   // Theme wrapper class
   'lib/customizer.php', // Theme customizer
   'lib/nav-walker.php', // Bootstrap nav
 ];
@@ -27,3 +27,17 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+if (function_exists('register_sidebar')) {
+
+  register_sidebar(array(
+    'name' => 'Widgetized Area',
+    'id'   => 'widgetized-area',
+    'description'   => 'This is a widgetized area.',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>'
+  ));
+
+}
